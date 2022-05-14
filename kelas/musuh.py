@@ -8,8 +8,8 @@ import pygame
 from pygame.locals import *
 from load_image import load_image
 
-from pelurumusuh import pelurumusuh
-from ledakan import ledakan
+from kelas.pelurumusuh import pelurumusuh
+from kelas.ledakan import ledakan
 
 
 size = (width, height) = (1024, 600)

@@ -8,7 +8,7 @@ import pygame
 from pygame.locals import *
 from load_image import load_image
 
-from peluru import peluru
+from kelas.peluru import peluru
 
 size = (width, height) = (1024, 600)
 black = (0, 0, 0)

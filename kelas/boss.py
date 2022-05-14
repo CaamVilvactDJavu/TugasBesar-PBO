@@ -8,10 +8,10 @@ import pygame
 from pygame.locals import *
 from load_image import load_image
 
-from enemysaucer import enemysaucer
-from musuh import musuh
-from pelurumusuh import pelurumusuh
-from enemydrone import enemydrone
+from kelas.enemysaucer import enemysaucer
+from kelas.musuh import musuh
+from kelas.pelurumusuh import pelurumusuh
+from kelas.enemydrone import enemydrone
 
 
 size = (width, height) = (1024, 600)

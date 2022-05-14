@@ -6,16 +6,16 @@ import os
 import pygame
 
 from pygame.locals import *
-from bintang import bintang
-from boss import boss
-from enemydrone import enemydrone
-from enemysaucer import enemysaucer
-from kotaksehat import kotaksehat
-from ledakan import ledakan
-from musuh import musuh
-from peluru import peluru
-from pelurumusuh import pelurumusuh
-from player import player
+from kelas.bintang import bintang
+from kelas.boss import boss
+from kelas.enemydrone import enemydrone
+from kelas.enemysaucer import enemysaucer
+from kelas.kotaksehat import kotaksehat
+from kelas.ledakan import ledakan
+from kelas.musuh import musuh
+from kelas.peluru import peluru
+from kelas.pelurumusuh import pelurumusuh
+from kelas.player import player
 from load_image import load_image
 
 
