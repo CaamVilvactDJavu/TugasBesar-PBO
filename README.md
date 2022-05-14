@@ -19,7 +19,7 @@ Disini saya menggunakan beberapa library yang telah disediakan oleh Python sendi
 6.  [os](https://docs.python.org/3/library/os.html). os adalah modul di [Python](https://www.python.org/) yang menyediakan fungsi untuk berinteraksi dengan Sistem Operasi. 
 
 ## Installation
-Untuk dapat memainkan game **Space Battle** pada user diharapkan untuk melakukan beberapa langkah berikut.
+Untuk dapat memainkan game **Space Battle**, user diharapkan untuk melakukan beberapa langkah berikut ini.
 
 1. User diharapkan untuk men-download folder ZIP yang tersedia pada tombol Code yang terdapat pada bagian atas github ini. Atau, user juga dapat meng-kloning source code github ini. Cukup copy-kan baris kata berikut di dalam command line.
    ```Python
