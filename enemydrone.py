@@ -32,7 +32,7 @@ def load_image(
     colorkey=None,
 ):
 
-    fullname = os.path.join('images', name)
+    fullname = os.path.join('assets/images', name)
     image = pygame.image.load(fullname)
     image = image.convert()
     if colorkey is not None:
@@ -63,7 +63,7 @@ class enemydrone(pygame.sprite.Sprite):
         self.shot = False
         self.waitTime = 0
         self.ledakan_sound = \
-            pygame.mixer.Sound('images/explosion.wav')
+            pygame.mixer.Sound('assets/audio/explosion.wav')
         self.ledakan_sound.set_volume(0.1)
 
     def checkbounds(self):

@@ -52,7 +52,7 @@ class musuh(pygame.sprite.Sprite):
 
     def __init__(self, n=0):
         pygame.sprite.Sprite.__init__(self, self.containers)
-        sheet = pygame.image.load('images/enemy_musuh.png')
+        sheet = pygame.image.load('assets/images/enemy_musuh.png')
         self.images = []
 
         rect = pygame.Rect((0, 0, 85, 92))
@@ -96,7 +96,7 @@ class musuh(pygame.sprite.Sprite):
         self.isautopilot = False
 
         self.ledakan_sound = \
-            pygame.mixer.Sound('images/explosion.wav')
+            pygame.mixer.Sound('assets/audio/explosion.wav')
         self.ledakan_sound.set_volume(0.1)
 
         self.shot = False

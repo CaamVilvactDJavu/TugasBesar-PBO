@@ -170,8 +170,8 @@ def main():
 
     user = player()
     pygame.display.set_caption('Space Battle')
-    bg_music = pygame.mixer.Sound('images/bg_music1.ogg')
-    boss_music = pygame.mixer.Sound('images/boss_music.ogg')
+    bg_music = pygame.mixer.Sound('assets/audio/bg_music1.ogg')
+    boss_music = pygame.mixer.Sound('assets/audio/boss_music.ogg')
 
     (logoimage, logorect) = load_image('gamelogo1.png', -1, -1, -1)
     logorect.left = width / 2 - logorect.width / 2
