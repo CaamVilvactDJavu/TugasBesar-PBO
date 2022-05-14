@@ -11,7 +11,7 @@ Space Battle adalah sebuah game yang mengharuskan user untuk menjaga pesawat mil
 ## Library
 Disini saya menggunakan beberapa library yang telah disediakan oleh Python sendiri, yaitu:
 
-1.  [Pygame]([htt](https://www.pygame.org/news)). Pygame adalah sebuah kumpulan modul [Python](https://www.python.org/) lintas platform yang dirancang untuk pembuatan video games.
+1.  [Pygame]((https://www.pygame.org/news)). Pygame adalah sebuah kumpulan modul [Python](https://www.python.org/) lintas platform yang dirancang untuk pembuatan video games.
 2.  [math](https://docs.python.org/3/library/math.html). math adalah seperangkat fungsi matematika bawaan yang disediakan oleh [Python](https://www.python.org/), termasuk didalamnya modul matematika bawaan, yang memudahkan kita dalam pembuatan game kali ini yang memerlukan koordinat dalam menentukan posisi dari masing-masing kelas.
 3.  [sys](https://docs.python.org/3/library/sys.html). sys adalah modul yang disediakan oleh [Python](https://www.python.org/) yang didalamnya terdapat berbagai fungsi dan variabel yang digunakan untuk memanipulasi berbagai bagian Python runtime environment.
 4.  [time](https://docs.python.org/3/library/time.html). time adalah modul yang disediakan oleh [Python](https://www.python.org/) yang memiliki berbagai fungsi yang berhubungan dengan waktu.
