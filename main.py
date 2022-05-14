@@ -22,6 +22,7 @@ from load_image import load_image
 size = (width, height) = (1024, 600)
 black = (0, 0, 0)
 white = (255, 255, 255)
+blue = (56, 49, 48)
 green = (0, 155, 0)
 red = (155, 0, 0)
 sky = (0, 0, 0)
@@ -86,7 +87,7 @@ def displaytext(
     color,
 ):
 
-    font = pygame.font.SysFont('sawasdee', fontsize, True)
+    font = pygame.font.SysFont('Fira Code', fontsize, True)
     text = font.render(text, 1, color)
     textpos = text.get_rect(centerx=x, centery=y)
     screen.blit(text, textpos)
@@ -168,7 +169,7 @@ def main():
     kotaksehat.containers = healthpacks
 
     user = player()
-    pygame.display.set_caption('GalaxyWars')
+    pygame.display.set_caption('Space Battle')
     bg_music = pygame.mixer.Sound('Sprites/bg_music1.ogg')
     boss_music = pygame.mixer.Sound('Sprites/boss_music.ogg')
 
@@ -176,7 +177,7 @@ def main():
     logorect.left = width / 2 - logorect.width / 2
     logorect.top = height / 2 - logorect.height * 5 / 4
 
-    bg, bgrect = load_image('bg5.png')
+    bg, bgrect = load_image('bg5.jpg')
 
     while not gameOver:
         while not menuExit:
@@ -208,9 +209,9 @@ def main():
             user.drawplayer()
             screen.blit(logoimage, logorect)
 
-            displaytext('Play', 32, width / 2 - 20, height * 3 / 4
+            displaytext('Mulai', 32, width / 2 - 20, height * 3 / 4
                         - 40, white)
-            displaytext('Exit', 32, width / 2 - 20, height * 3 / 4,
+            displaytext('Keluar', 32, width / 2 - 20, height * 3 / 4,
                         white)
 
             if menuhighlight % 2 == 0:
@@ -343,10 +344,10 @@ def main():
             bntgjth1.gambarbintang()
 
             if user.nyawa > 0:
-                showhealthbar(user.nyawa, green, [100, height - 20,
+                showhealthbar(user.nyawa, red, [100, height - 20,
                               user.nyawa * 4, 10], 4)
-            displaytext('HEALTH', 22, 50, height - 15, white)
-            displaytext('Score:', 22, width - 100, 15, white)
+            displaytext('Health', 22, 50, height - 15, white)
+            displaytext('Score', 22, width - 100, 15, white)
             displaytext(str(user.skore), 22, width - 35, 15, white)
             user.drawplayer()
 
