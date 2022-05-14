@@ -32,7 +32,7 @@ def load_image(
     colorkey=None,
 ):
 
-    fullname = os.path.join('Sprites', name)
+    fullname = os.path.join('images', name)
     image = pygame.image.load(fullname)
     image = image.convert()
     if colorkey is not None:
@@ -50,7 +50,7 @@ class enemysaucer(pygame.sprite.Sprite):
 
     def __init__(self, x):
         pygame.sprite.Sprite.__init__(self, self.containers)
-        sheet = pygame.image.load('Sprites/saucer.png')
+        sheet = pygame.image.load('images/saucer.png')
         self.images = []
 
         for i in range(0, 672, 96):
@@ -75,7 +75,7 @@ class enemysaucer(pygame.sprite.Sprite):
         self.haltpos = random.randrange(300, 510)
         self.shot = False
         self.ledakan_sound = \
-            pygame.mixer.Sound('Sprites/explosion.wav')
+            pygame.mixer.Sound('images/explosion.wav')
         self.ledakan_sound.set_volume(0.1)
 
     def checkbounds(self):

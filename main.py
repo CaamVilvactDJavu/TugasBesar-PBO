@@ -170,8 +170,8 @@ def main():
 
     user = player()
     pygame.display.set_caption('Space Battle')
-    bg_music = pygame.mixer.Sound('Sprites/bg_music1.ogg')
-    boss_music = pygame.mixer.Sound('Sprites/boss_music.ogg')
+    bg_music = pygame.mixer.Sound('images/bg_music1.ogg')
+    boss_music = pygame.mixer.Sound('images/boss_music.ogg')
 
     (logoimage, logorect) = load_image('gamelogo1.png', -1, -1, -1)
     logorect.left = width / 2 - logorect.width / 2
@@ -527,17 +527,17 @@ def main():
             bntgjth1.gambarbintang()
 
             if user.won == False:
-                displaytext('Game Over', 26, width / 2 - 30, height
+                displaytext('Game Berakhir', 26, width / 2 - 30, height
                             / 2, white)
             else:
-                displaytext('Congratulations! You Won!', 26, width / 2
+                displaytext('Selamat! Kamu Menang!', 26, width / 2
                             - 30, height / 2, white)
 
-            displaytext('Your score: ', 26, width / 2 - 40, height / 2
+            displaytext('Score kamu : ', 26, width / 2 - 40, height / 2
                         + 40, white)
             displaytext(str(user.skore), 26, width / 2 + 50, height / 2
                         + 43, white)
-            displaytext('Press Enter to exit...', 14, width / 2 - 30,
+            displaytext('Tekan Enter untuk keluar...', 14, width / 2 - 30,
                         height / 2 + 90, white)
             pygame.display.update()
             clock.tick(FPS)

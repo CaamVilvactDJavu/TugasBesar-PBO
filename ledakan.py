@@ -28,7 +28,7 @@ def load_image(
     colorkey=None,
 ):
 
-    fullname = os.path.join('Sprites', name)
+    fullname = os.path.join('images', name)
     image = pygame.image.load(fullname)
     image = image.convert()
     if colorkey is not None:
@@ -46,7 +46,7 @@ class ledakan(pygame.sprite.Sprite):
 
     def __init__(self, x, y, radius=-1):
         pygame.sprite.Sprite.__init__(self, self.containers)
-        sheet = pygame.image.load('Sprites/ledakan.png')
+        sheet = pygame.image.load('images/ledakan.png')
         self.images = []
         for i in range(0, 768, 48):
             rect = pygame.Rect((i, 0, 48, 48))

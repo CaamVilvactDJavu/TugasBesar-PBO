@@ -11,7 +11,7 @@ def load_image(
     colorkey=None,
 ):
 
-    fullname = os.path.join('Sprites', name)
+    fullname = os.path.join('images', name)
     image = pygame.image.load(fullname)
     image = image.convert()
     if colorkey is not None:
