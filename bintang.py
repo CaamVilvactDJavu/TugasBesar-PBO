@@ -1,9 +1,21 @@
-import os
-import pygame
+import math
 import sys
 import time
-import math
 import random
+import os
+import pygame
+
+size = (width, height) = (1024, 600)
+black = (0, 0, 0)
+white = (255, 255, 255)
+green = (0, 155, 0)
+red = (155, 0, 0)
+sky = (0, 0, 0)
+clock = pygame.time.Clock()
+FPS = 21
+maxspeed = 15
+
+screen = pygame.display.set_mode(size)
 
 
 class bintang:
