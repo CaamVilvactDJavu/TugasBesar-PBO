@@ -35,7 +35,7 @@ Jika ingin masuk ke dalam game tinggal mengetik-kan.
    ```Python
    python main.py
    ```
-Game ini adalah game yang sangat mudah untuk dimainkan. Kita hanya disuruh untuk melawan pesawat musuh dengan menggunakan tembakan, jika musuh kalah maka pesawat musuh akan hancur. Musuh juga menggunakan tembakan yang akan membuat health (darah) kita berkurang setiap terkena serangan. Health kita juga akan berkurang, jika musuh mengenai pesawat kita. Di dalam game juga terdapat fitur menambah health (darah) kita, dengan mendekatkan pesawat kita kepada health pack.
+Game ini adalah game yang sangat mudah untuk dimainkan. Kita hanya disuruh untuk melawan pesawat musuh dengan menggunakan tembakan, jika musuh kalah maka pesawat musuh akan hancur yang membuat kita mendapatkan score. Musuh juga menggunakan tembakan yang akan membuat health (darah) kita berkurang setiap terkena serangan. Health kita juga akan berkurang, jika musuh mengenai pesawat kita. Di dalam game juga terdapat fitur menambah health (darah) kita, dengan mendekatkan pesawat kita kepada health pack. 
 
 Game ini menggunakan beberapa tombol yang ada pada keyboard, seperti:
 
@@ -44,10 +44,10 @@ Game ini menggunakan beberapa tombol yang ada pada keyboard, seperti:
 - Up-Arrow : untuk membuat pesawat kita mengeluarkan tembakan.
   
 ## Game View
-- Tampilan Menu Game
+- **Tampilan Menu Game**
   ![alt tex](assets/images/TampilanMenu.png)
-- Tampilan Gameplay
+- **Tampilan Gameplay**
   ![alt tex](assets/images/TampilanGameplay.png)
-- Tampilan Game Berakhir
+- **Tampilan Game Berakhir**
   ![alt tex](assets/images/TampilanGameBerakhir.png)
 
