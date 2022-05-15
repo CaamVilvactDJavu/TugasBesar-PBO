@@ -21,13 +21,33 @@ Disini saya menggunakan beberapa library yang telah disediakan oleh Python sendi
 ## Installation
 Untuk dapat memainkan game **Space Battle**, user diharapkan untuk melakukan beberapa langkah berikut ini.
 
-1. User diharapkan untuk men-download folder ZIP yang tersedia pada tombol Code yang terdapat pada bagian atas github ini. Atau, user juga dapat meng-kloning source code github ini. Cukup mengetik-kan baris kata berikut di dalam command line.
+1. User diharapkan untuk men-download folder ZIP yang tersedia pada tombol **Code** yang terdapat pada bagian atas github ini. Atau, user juga dapat meng-kloning source code github ini. Cukup mengetik-kan baris kata berikut di dalam command line.
    ```Python
    git clone https://github.com/CaamVilvactDJavu/TugasBesar-PBO
    ```
 2. User juga diharuskan untuk meng-install Pygame, karena jika tidak maka game tidak akan bisa berjalan. Instalasinya cukup mudah, dengan cara mengetik-kan beberapa baris kata berikut di dalam command line.
     ```Python
     pip install pygame
-    ```
+   ```
 
+## How to Play
+Jika ingin masuk ke dalam game tinggal mengetik-kan.
+   ```Python
+   python main.py
+   ```
+Game ini adalah game yang sangat mudah untuk dimainkan. Kita hanya disuruh untuk melawan pesawat musuh dengan menggunakan tembakan, jika musuh kalah maka pesawat musuh akan hancur. Musuh juga menggunakan tembakan yang akan membuat health (darah) kita berkurang setiap terkena serangan. Health kita juga akan berkurang, jika musuh mengenai pesawat kita. Di dalam game juga terdapat fitur menambah health (darah) kita, dengan mendekatkan pesawat kita kepada health pack.
+
+Game ini menggunakan beberapa tombol yang ada pada keyboard, seperti:
+
+- Left-Arrow : untuk membuat pesawat kita bergerak ke kiri.
+- Right-Arrow : untuk membuat pesawat kita bergerak ke kanan.
+- Up-Arrow : untuk membuat pesawat kita mengeluarkan tembakan.
+  
+## Game View
+- Tampilan Menu Game
+  ![alt tex](assets/images/TampilanMenu.png)
+- Tampilan Gameplay
+  ![alt tex](assets/images/TampilanGameplay.png)
+- Tampilan Game Berakhir
+  ![alt tex](assets/images/TampilanGameBerakhir.png)
 
