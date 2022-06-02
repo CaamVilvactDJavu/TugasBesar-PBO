@@ -45,7 +45,6 @@ def cpumove(cpu, target):
     else:
         cpu.tembak = 0
 
-
 def bossmove(cpu, target):
     if target.rect.left < cpu.rect.left and cpu.spree == False:
         cpu.pelatuk = 1
@@ -66,7 +65,7 @@ def bossmove(cpu, target):
     else:
         pass
 
-
+# untuk menampilakan jumlah darah
 def showhealthbar(
     nyawa,
     barcolor,
@@ -78,7 +77,7 @@ def showhealthbar(
     healthbar = healthbar.convert_alpha()
     pygame.draw.rect(screen, barcolor, pos)
 
-
+# menampilkan display text
 def displaytext(
     text,
     fontsize,
@@ -115,7 +114,7 @@ def moveplayer(Player):
     else:
         Player.autopilot()
 
-
+# game condition
 def alurcerita(wavecounter):
     if wavecounter >= 0 and wavecounter <= 700:  # musuh
         return 0
@@ -135,9 +134,9 @@ def alurcerita(wavecounter):
 
 pygame.init()
 
-
+# main game
 def main():
-
+    # game condision
     gameOver = False
     menuExit = False
     stageStart = False
@@ -151,7 +150,7 @@ def main():
     wave = 0
 
     bntgjth1 = bintang(1, white, 50, 5)
-
+    # game object setup
     bullets = pygame.sprite.Group()
     enemybullets = pygame.sprite.Group()
     enemies = pygame.sprite.Group()
@@ -358,7 +357,7 @@ def main():
             drones.update()
             saucers.update()
             healthpacks.update()
-
+            # menjalankan semua method dari objek
             bullets.draw(screen)
             enemybullets.draw(screen)
             enemies.draw(screen)
@@ -511,7 +510,7 @@ def main():
             pygame.display.update()
             clock.tick(FPS)
             moveplayer(user)
-
+        # menampilakan Game over screen
         while gameOverScreen:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
