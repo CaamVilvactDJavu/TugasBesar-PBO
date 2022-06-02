@@ -208,19 +208,13 @@ def main():
             user.drawplayer()
             screen.blit(logoimage, logorect)
 
-            displaytext('Mulai', 32, width / 2 - 20, height * 3 / 4
-                        - 40, white)
-            displaytext('Keluar', 32, width / 2 - 20, height * 3 / 4,
-                        white)
+            displaytext('Mulai', 32, width / 2 - 20, height * 3 / 4 - 40, white)
+            displaytext('Keluar', 32, width / 2 - 20, height * 3 / 4, white)
 
             if menuhighlight % 2 == 0:
-                screen.blit(pygame.transform.scale(user.image, (25,
-                            25)), [width / 2 - 100, height * 3 / 4
-                            - 55, 15, 15])
+                screen.blit(pygame.transform.scale(user.image, (25, 25)), [width / 2 - 100, height * 3 / 4 - 55, 15, 15])
             elif menuhighlight % 2 == 1:
-                screen.blit(pygame.transform.scale(user.image, (25,
-                            25)), [width / 2 - 100, height * 3 / 4
-                            - 15, 15, 15])
+                screen.blit(pygame.transform.scale(user.image, (25, 25)), [width / 2 - 100, height * 3 / 4 - 15, 15, 15])
             pygame.display.update()
             clock.tick(FPS)
 
@@ -265,11 +259,9 @@ def main():
                 if len(drones) > 0:
                     for drone in drones:
                         if drone.rect.left < width / 2:
-                            enemydrone(random.randrange(width / 2 + 60,
-                                                        width - 60))
+                            enemydrone(random.randrange(width / 2 + 60, width - 60))
                         else:
-                            enemydrone(random.randrange(0, width / 2
-                                                        - 60))
+                            enemydrone(random.randrange(0, width / 2 - 60))
                 else:
                     enemydrone(random.randrange(0, width - 60))
 
@@ -287,29 +279,25 @@ def main():
             for ship in enemies:
                 cpumove(ship, user)
 
-            for musuhhit in pygame.sprite.groupcollide(enemies,
-                                                       bullets, 0, 1):
+            for musuhhit in pygame.sprite.groupcollide(enemies, bullets, 0, 1):
                 musuhhit.nyawa -= 1
                 if musuhhit.nyawa <= 0:
                     user.kills += 1
                     user.skore += 1
 
-            for dronehit in pygame.sprite.groupcollide(drones, bullets,
-                                                       0, 1):
+            for dronehit in pygame.sprite.groupcollide(drones, bullets, 0, 1):
                 dronehit.nyawa -= 1
                 if dronehit.nyawa <= 0:
                     user.kills += 1
                     user.skore += 10
 
-            for saucerhit in pygame.sprite.groupcollide(saucers,
-                                                        bullets, 0, 1):
+            for saucerhit in pygame.sprite.groupcollide(saucers, bullets, 0, 1):
                 saucerhit.nyawa -= 1
                 if saucerhit.nyawa <= 0:
                     user.kills += 1
                     user.skore += 5
 
-            for firedbullet in pygame.sprite.spritecollide(user,
-                                                           enemybullets, 1):
+            for firedbullet in pygame.sprite.spritecollide(user, enemybullets, 1):
                 user.nyawa -= 1
 
             for enemycollided in enemies:
@@ -343,8 +331,7 @@ def main():
             bntgjth1.gambarbintang()
 
             if user.nyawa > 0:
-                showhealthbar(user.nyawa, red, [100, height - 20,
-                              user.nyawa * 4, 10], 4)
+                showhealthbar(user.nyawa, red, [100, height - 20, user.nyawa * 4, 10], 4)
             displaytext('Health', 22, 50, height - 15, white)
             displaytext('Score', 22, width - 100, 15, white)
             displaytext(str(user.skore), 22, width - 35, 15, white)
@@ -357,6 +344,7 @@ def main():
             drones.update()
             saucers.update()
             healthpacks.update()
+
             # menjalankan semua method dari objek
             bullets.draw(screen)
             enemybullets.draw(screen)
@@ -426,29 +414,25 @@ def main():
                         user.won = True
                     userbullet.kill()
 
-            for musuhhit in pygame.sprite.groupcollide(enemies,
-                                                       bullets, 0, 1):
+            for musuhhit in pygame.sprite.groupcollide(enemies, bullets, 0, 1):
                 musuhhit.nyawa -= 1
                 if musuhhit.nyawa <= 0:
                     user.kills += 1
                     user.skore += 1
 
-            for dronehit in pygame.sprite.groupcollide(drones, bullets,
-                                                       0, 1):
+            for dronehit in pygame.sprite.groupcollide(drones, bullets, 0, 1):
                 dronehit.nyawa -= 1
                 if dronehit.nyawa <= 0:
                     user.kills += 1
                     user.skore += 10
 
-            for saucerhit in pygame.sprite.groupcollide(saucers,
-                                                        bullets, 0, 1):
+            for saucerhit in pygame.sprite.groupcollide(saucers, bullets, 0, 1):
                 saucerhit.nyawa -= 1
                 if saucerhit.nyawa <= 0:
                     user.kills += 1
                     user.skore += 5
 
-            for firedbullet in pygame.sprite.spritecollide(user,
-                                                           enemybullets, 1):
+            for firedbullet in pygame.sprite.spritecollide(user, enemybullets, 1):
                 user.nyawa -= 1
 
             for musuhcollided in enemies:
@@ -477,13 +461,11 @@ def main():
             bntgjth1.gambarbintang()
 
             if user.nyawa > 0:
-                showhealthbar(user.nyawa, green, [100, height - 20,
-                              user.nyawa * 4, 10], 4)
+                showhealthbar(user.nyawa, green, [100, height - 20, user.nyawa * 4, 10], 4)
             displaytext('HEALTH', 22, 50, height - 15, white)
 
             if finalboss.nyawa > 0:
-                showhealthbar(finalboss.nyawa, red, [100, 20,
-                              finalboss.nyawa * 0.8, 10], 0.8)
+                showhealthbar(finalboss.nyawa, red, [100, 20, finalboss.nyawa * 0.8, 10], 0.8)
             displaytext('BOSS', 22, 50, 25, white)
 
             displaytext('Score:', 22, width - 100, 15, white)
@@ -526,18 +508,13 @@ def main():
             bntgjth1.gambarbintang()
 
             if user.won == False:
-                displaytext('Game Berakhir', 26, width / 2 - 30, height
-                            / 2, white)
+                displaytext('Game Berakhir', 26, width / 2 - 30, height / 2, white)
             else:
-                displaytext('Selamat! Kamu Menang!', 26, width / 2
-                            - 30, height / 2, white)
+                displaytext('Selamat! Kamu Menang!', 26, width / 2 - 30, height / 2, white)
 
-            displaytext('Score kamu : ', 26, width / 2 - 40, height / 2
-                        + 40, white)
-            displaytext(str(user.skore), 26, width / 2 + 50, height / 2
-                        + 43, white)
-            displaytext('Tekan Enter untuk keluar...', 14, width / 2 - 30,
-                        height / 2 + 90, white)
+            displaytext('Score kamu : ', 26, width / 2 - 40, height / 2 + 40, white)
+            displaytext(str(user.skore), 26, width / 2 + 50, height / 2 + 43, white)
+            displaytext('Tekan Enter untuk keluar...', 14, width / 2 - 30, height / 2 + 90, white)
             pygame.display.update()
             clock.tick(FPS)
 
